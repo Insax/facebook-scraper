@@ -42,8 +42,7 @@ class ParseFacebook extends Command
         $sites = SitesToParse::get();
         foreach($sites as $site) {
             $facebook = Facebook::get($site->site_id.'/feed', env('FACEBOOK_OATH_TOKEN'));
+            var_dump($facebook);
         }
-
-        var_dump($facebook);
     }
 }
